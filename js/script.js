@@ -1,45 +1,45 @@
-"use strict";
+'use strict';
 
-document.addEventListener("DOMContentLoaded", () => {
-  const cardList = document.querySelector("#card-list");
+document.addEventListener('DOMContentLoaded', () => {
+  const cardList = document.querySelector('#card-list');
 
   const data = [
     {
-      name: "Company Profile Direct Retail (Freelance)",
-      image: "DRetail/1.png",
+      name: 'Company Profile Direct Retail',
+      image: 'DRetail/1.png',
       description:
-        "This company profile management sistem is a Laravel 10 based application. It features user authentication, content management system, and use MySQL for database system. Bootstrap is used in main template as a front end alongside native css and javascript.",
-      link: "project1.html",
+        'This company profile management sistem is a Laravel 10 based application. It features user authentication, content management system, and use MySQL for database system. Bootstrap is used in main template as a front end alongside native css and javascript.',
+      link: 'project1.html',
     },
     {
-      name: "Company Profile Tanigo (Magang)",
-      image: "Tanigo/2.png",
+      name: 'Company Profile AW Garage',
+      image: 'Tanigo/2.png',
       description:
-        "This company profile management sistem is a Laravel 8 based application. It features user authentication, content management system, and use MySQL for database system. Tailwindcss is used in main template as a front end alongside alpineJs and Jquery.",
-      link: "project2.html",
+        'This company profile is a Laravel 11 based application. Bootstrap is used in main template as a front end alongside native css and javascript.',
+      link: 'project2.html',
     },
     {
-      name: "Company Profile PT HIT (Magang)",
-      image: "HIT/3.png",
+      name: 'Company Profile Neo Mitra Selaras',
+      image: 'HIT/3.png',
       description:
-        "This company profile management sistem is a Laravel 8 based application. It features user authentication, content management system, and use MySQL for database system. Tailwindcss is used in main template as a front end alongside alpineJs and Jquery.",
-      link: "project3.html",
+        'This company profile management sistem is a Laravel 11 based application. It features user authentication, content management system, and use MySQL for database system. TailwindCSS is used in main template as a front end alongside alpineJs.',
+      link: 'project3.html',
     },
   ];
 
   data.forEach((item) => {
-    const cardItem = document.createElement("div");
+    const cardItem = document.createElement('div');
     cardItem.classList.add(
-      "bg-white",
-      "rounded-lg",
-      "overflow-hidden",
-      "shadow-lg",
-      "hover:shadow-2xl",
-      "transition-all",
-      "duration-300",
-      "ease-in-out",
-      "transform",
-      "hover:-translate-y-2"
+      'bg-white',
+      'rounded-lg',
+      'overflow-hidden',
+      'shadow-lg',
+      'hover:shadow-2xl',
+      'transition-all',
+      'duration-300',
+      'ease-in-out',
+      'transform',
+      'hover:-translate-y-2'
     );
 
     cardItem.innerHTML = `
