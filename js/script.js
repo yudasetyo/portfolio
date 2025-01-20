@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       name: 'Company Profile AW Garage',
-      image: 'Tanigo/2.png',
+      image: 'AW-Garage/2.png',
       description:
         'This company profile is a Laravel 11 based application. Bootstrap is used in main template as a front end alongside native css and javascript.',
       link: 'project2.html',
     },
     {
       name: 'Company Profile Neo Mitra Selaras',
-      image: 'HIT/3.png',
+      image: 'Neomitra/3.png',
       description:
         'This company profile management sistem is a Laravel 11 based application. It features user authentication, content management system, and use MySQL for database system. TailwindCSS is used in main template as a front end alongside alpineJs.',
       link: 'project3.html',
