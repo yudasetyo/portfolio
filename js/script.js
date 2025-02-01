@@ -1,48 +1,52 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const cardList = document.querySelector('#card-list');
+const cardList = document.querySelector('#card-list');
+const about = document.querySelector('#about');
+const project = document.querySelector('#projects');
+const menu1 = document.querySelector('#menu-1');
+const menu2 = document.querySelector('#menu-2');
+const menu3 = document.querySelector('#menu-3');
 
-  const data = [
-    {
-      name: 'Company Profile Direct Retail',
-      image: 'DRetail/1.png',
-      description:
-        'This company profile management sistem is a Laravel 10 based application. It features user authentication, content management system, and use MySQL for database system. Bootstrap is used in main template as a front end alongside native css and javascript.',
-      link: 'project1.html',
-    },
-    {
-      name: 'Company Profile AW Garage',
-      image: 'AW-Garage/2.png',
-      description:
-        'This company profile is a Laravel 11 based application. Bootstrap is used in main template as a front end alongside native css and javascript.',
-      link: 'project2.html',
-    },
-    {
-      name: 'Company Profile Neo Mitra Selaras',
-      image: 'Neomitra/3.png',
-      description:
-        'This company profile management sistem is a Laravel 11 based application. It features user authentication, content management system, and use MySQL for database system. TailwindCSS is used in main template as a front end alongside alpineJs.',
-      link: 'project3.html',
-    },
-  ];
+const data = [
+  {
+    name: 'Company Profile Direct Retail',
+    image: 'DRetail/1.png',
+    description:
+      'This company profile management sistem is a Laravel 10 based application. It features user authentication, content management system, and use MySQL for database system. Bootstrap is used in main template as a front end alongside native css and javascript.',
+    link: 'project1.html',
+  },
+  {
+    name: 'Company Profile AW Garage',
+    image: 'AW-Garage/2.png',
+    description:
+      'This company profile is a Laravel 11 based application. Bootstrap is used in main template as a front end alongside native css and javascript.',
+    link: 'project2.html',
+  },
+  {
+    name: 'Company Profile Neo Mitra Selaras',
+    image: 'Neomitra/3.png',
+    description:
+      'This company profile management sistem is a Laravel 11 based application. It features user authentication, content management system, and use MySQL for database system. TailwindCSS is used in main template as a front end alongside alpineJs.',
+    link: 'project3.html',
+  },
+];
 
-  data.forEach((item) => {
-    const cardItem = document.createElement('div');
-    cardItem.classList.add(
-      'bg-white',
-      'rounded-lg',
-      'overflow-hidden',
-      'shadow-lg',
-      'hover:shadow-2xl',
-      'transition-all',
-      'duration-300',
-      'ease-in-out',
-      'transform',
-      'hover:-translate-y-2'
-    );
+data.forEach((item) => {
+  const cardItem = document.createElement('div');
+  cardItem.classList.add(
+    'bg-white',
+    'rounded-lg',
+    'overflow-hidden',
+    'shadow-lg',
+    'hover:shadow-2xl',
+    'transition-all',
+    'duration-300',
+    'ease-in-out',
+    'transform',
+    'hover:-translate-y-2'
+  );
 
-    cardItem.innerHTML = `
+  cardItem.innerHTML = `
                     <div class="relative group">
                         <img src="./image/${item.image}" alt="${item.name}" class="w-full h-48 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105" />
                     </div>
@@ -63,6 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
 
-    cardList.appendChild(cardItem);
-  });
+  cardList.prepend(cardItem);
+});
+
+menu2.addEventListener('click', (e) => {
+  about.scrollIntoView({ behavior: 'smooth' });
+});
+
+menu3.addEventListener('click', (e) => {
+  project.scrollIntoView({ behavior: 'smooth' });
 });
