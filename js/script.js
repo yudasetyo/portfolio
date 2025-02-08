@@ -1,11 +1,6 @@
 'use strict';
 
 const cardList = document.querySelector('#card-list');
-const about = document.querySelector('#about');
-const project = document.querySelector('#projects');
-const menu1 = document.querySelector('#menu-1');
-const menu2 = document.querySelector('#menu-2');
-const menu3 = document.querySelector('#menu-3');
 
 const data = [
   {
@@ -70,10 +65,12 @@ data.forEach((item) => {
   cardList.prepend(cardItem);
 });
 
-menu2.addEventListener('click', (e) => {
-  about.scrollIntoView({ behavior: 'smooth' });
-});
+// Scroll To Section
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
 
-menu3.addEventListener('click', (e) => {
-  project.scrollIntoView({ behavior: 'smooth' });
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
